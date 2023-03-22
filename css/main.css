@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #f6eedf; }
+
+img {
+  max-width: 100%; }
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*missing alt attribute*/
+img:not([alt]) {
+  outline: 5px dashed red;
+  outline-offset: 5px; }
+
+/*empty alt attribute*/
+img[alt=""] {
+  outline: 5px solid blue;
+  outline-offset: 15px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: "Titillium Web", sans-serif; }
+
+a:link,
+a:visited {
+  color: #f6eedf;
+  text-decoration: none;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem; }
+
+p {
+  color: white;
+  font-size: clamp(1.2rem, 2vw, 2rem); }
+
+i {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: #ffc513; }
+
+.uti-svg-ico {
+  align-items: center;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  line-height: 0;
+  width: 3rem; }
+
+.booking {
+  grid-column: 2/8;
+  background-color: #ffc513;
+  height: 40rem; }
+
+.booking-date {
+  grid-column: 8/12;
+  background-color: #ff724c;
+  height: 40rem; }
+
+.events-content {
+  grid-column: 1/11;
+  background-color: #ff724c;
+  height: 40rem; }
+
+.events-text {
+  grid-column: 11/12;
+  background-color: #730039;
+  height: 40rem; }
+
+.features-content {
+  grid-column: 1/11;
+  background-color: #730039;
+  height: 40rem; }
+
+.features-text {
+  grid-column: 11/12;
+  background-color: #ffc513;
+  height: 40rem; }
+
+.gallery-text {
+  grid-column: 2/3;
+  height: 40rem;
+  background-color: #ffc513; }
+
+.gallery-carousel {
+  grid-column: 3/-1;
+  height: 40rem;
+  background-color: #ff724c; }
+
+.motto {
+  background-color: #ffc513;
+  grid-column: 1/-1;
+  height: 40rem; }
+
+.testimonials {
+  background-color: #ff724c;
+  grid-column: 2/12;
+  height: 40rem; }
+
+.villas {
+  background-color: #730039;
+  grid-column: 1/-1;
+  height: 40rem; }
+
+.footer {
+  background-color: #730039;
+  grid-column: 1/-1;
+  height: 40rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(10, minmax(min-content, 11rem)) minmax(6rem, 1fr);
+  grid-template-rows: repeat(9, min-content); }
+
+.header {
+  grid-column: 1 /-1;
+  height: 100vh;
+  max-height: 80vh;
+  background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.header__main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+  .header__main-nav input[type="checkbox"] {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3; }
+    .header__main-nav input[type="checkbox"]:checked + .header__main-nav--hamburguer > div {
+      transform: rotate(135deg); }
+    .header__main-nav input[type="checkbox"]:checked + .header__main-nav--hamburguer > div::before {
+      left: 0;
+      top: 0;
+      width: 100%;
+      transform: rotate(270deg); }
+    .header__main-nav input[type="checkbox"]:checked + .header__main-nav--hamburguer > div::after {
+      opacity: 0; }
+  .header__main-nav--hamburguer {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    background-color: #ffc513;
+    padding: 1rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header__main-nav--hamburguer div {
+      height: 0.3rem;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+      background-color: #f6eedf; }
+      .header__main-nav--hamburguer div::before {
+        content: "";
+        height: 0.3rem;
+        background-color: #f6eedf;
+        position: absolute;
+        width: 60%;
+        top: -1rem;
+        left: 0;
+        transition: all 0.3s ease-in-out; }
+      .header__main-nav--hamburguer div::after {
+        content: "";
+        height: 0.3rem;
+        background-color: #f6eedf;
+        position: absolute;
+        width: 60%;
+        bottom: -1rem;
+        right: 0;
+        transition: all 0.3s ease-in-out; }
+  .header__main-nav--menu {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header__main-nav--menu > div {
+      background-color: rgba(255, 196, 19, 0.85);
+      height: 200%;
+      width: 200%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out; }
+      .header__main-nav--menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 1s ease-in-out; }
+    .header__main-nav--menu .header__main-nav--list .header__main-nav--item {
+      margin: 3rem 0; }
+      .header__main-nav--menu .header__main-nav--list .header__main-nav--item:hover .header__main-nav--link::after {
+        transform: scaleY(1); }
+    .header__main-nav--menu .header__main-nav--list .header__main-nav--link {
+      font-size: clamp(2rem, 3vw, 3rem);
+      position: relative; }
+      .header__main-nav--menu .header__main-nav--list .header__main-nav--link::after {
+        content: "";
+        background-color: rgba(117, 0, 59, 0.85);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: -1;
+        transform: scaleY(0);
+        transition: transform 0.3s ease-in-out; }
+
+.header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
+  visibility: visible; }
+
+.header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu > div {
+  transform: scaleX(1); }
+
+.header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu > div > div {
+  opacity: 1; }

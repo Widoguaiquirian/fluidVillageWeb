@@ -1,0 +1,11 @@
+.booking {
+   grid-column: 2/8;
+   background-color: $color-secondary;
+   height: 40rem;
+}
+
+.booking-date {
+   grid-column: 8/12;
+   background-color: $color-tertiary;
+   height: 40rem;
+}

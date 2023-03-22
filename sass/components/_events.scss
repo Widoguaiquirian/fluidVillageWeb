@@ -1,0 +1,11 @@
+.events-content {
+   grid-column: 1/11;
+   background-color: $color-tertiary;
+   height: 40rem;
+}
+
+.events-text {
+   grid-column: 11/12;
+   background-color: $color-primary;
+   height: 40rem;
+}

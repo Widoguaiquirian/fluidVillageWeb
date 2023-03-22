@@ -1,0 +1,33 @@
+html {
+   font-size: 62.5%;
+
+   // Seleccionar el font de mobile
+   // @include response(mdBreakPoint) {
+   //    font-size: 56.25%;
+   // }
+}
+
+body {
+   font-size: 1.6rem;
+   line-height: 1.7;
+   font-family: "Titillium Web", sans-serif;
+}
+
+a:link,
+a:visited {
+   color: $color-quaternary;
+   text-decoration: none;
+   position: relative;
+   padding: 1rem 2rem;
+   border-radius: 0.3rem;
+}
+
+p {
+   color: white;
+   font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+i {
+   font-size: $font-size-title;
+   color: $color-secondary;
+}

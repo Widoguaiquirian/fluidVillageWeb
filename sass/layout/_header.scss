@@ -1,0 +1,9 @@
+.header {
+   grid-column: 1 /-1;
+   height: 100vh;
+   max-height: 80vh;
+   background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(../images/hero.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
