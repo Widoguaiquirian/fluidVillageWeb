@@ -40,6 +40,9 @@
       background-color: $color-secondary;
       padding: 1rem;
       z-index: 2;
+      border-radius: 3px;
+      // Animation name
+      animation: main-nav 2s;
 
       @include flexLayout;
 

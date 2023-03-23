@@ -1,0 +1,13 @@
+// Hamburguer menu animation
+
+@keyframes main-nav {
+   from {
+      transform: translateX(150rem) rotate(1800deg);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+   }
+}
