@@ -44,7 +44,6 @@ a:visited {
   color: #f6eedf;
   text-decoration: none;
   position: relative;
-  padding: 1rem 2rem;
   border-radius: 0.3rem; }
 
 p {
@@ -153,31 +152,30 @@ i {
     grid-column: 1/-1;
     align-self: center; }
     .header__logo__content--content--title {
-      font-size: clamp(3rem, 8vw, 10rem);
+      font-size: clamp(3.8rem, 8vw, 8rem);
       font-weight: 300;
       color: white;
       text-transform: uppercase;
       margin: 0;
       padding: 0 2rem 0 clamp(3rem, 5vw, 4.5rem); }
     .header__logo__content--content--para {
-      font-size: clamp(1.6rem, 4vw, 4rem);
+      font-size: clamp(1.6rem, 4vw, 3.6rem);
       font-weight: 500;
       margin: 0;
       padding: 0 2rem 2rem clamp(3rem, 5vw, 4.5rem); }
     .header__logo__content--content--link {
-      font-size: clamp(1.6rem, 4vw, 2.5rem);
-      font-weight: 100;
+      font-size: clamp(1.4rem, 4vw, 2.5rem);
+      font-weight: 300;
       border-radius: 3px;
       display: inline-block;
       border: 1px solid #ff724c;
       margin-left: clamp(3rem, 5vw, 4.5rem);
-      padding: 0;
+      padding: 0.7rem 1rem;
       line-height: 1;
       transition: 0.3s; }
       .header__logo__content--content--link:hover {
         background-color: white;
-        color: #ff724c;
-        font-weight: bold; }
+        color: #ff724c; }
 
 .header__main-nav {
   position: fixed;
@@ -275,7 +273,8 @@ i {
         transform: scaleY(1); }
     .header__main-nav--menu .header__main-nav--list .header__main-nav--link {
       font-size: clamp(2rem, 3vw, 3rem);
-      position: relative; }
+      position: relative;
+      padding: 1rem 2rem; }
       .header__main-nav--menu .header__main-nav--list .header__main-nav--link::after {
         content: "";
         background-color: rgba(117, 0, 59, 0.85);
