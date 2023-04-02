@@ -1,7 +1,7 @@
 .villas {
    grid-column: 1/-1;
    height: auto;
-   padding: $padding-section;
+   background-color: $color-primary;
 
    display: flex;
    justify-content: center;
@@ -14,11 +14,12 @@
       flex-grow: 1;
       margin: 1rem;
       cursor: pointer;
-      transition: $transition-duration;
       border-radius: 5px;
+      border: 2px solid $color-primary;
+      transition: $transition-duration;
 
       &:hover {
-         transform: scale(1.04);
+         border: 2px solid $color-tertiary;
       }
    }
 
@@ -48,12 +49,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      border: 5px solid $color-primary;
-      transition: $transition-duration;
-
-      &:hover {
-         border: 5px solid $color-secondary;
-      }
    }
 
    &__villa--title {

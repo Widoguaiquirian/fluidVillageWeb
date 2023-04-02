@@ -39,16 +39,29 @@ body {
   line-height: 1.7;
   font-family: "Titillium Web", sans-serif; }
 
+h1::selection,
+h1::selection,
+h1::selection {
+  background-color: rgba(117, 0, 59, 0.85);
+  color: #f6eedf; }
+
 a:link,
 a:visited {
   color: #f6eedf;
   text-decoration: none;
   position: relative;
   border-radius: 0.3rem; }
+  a:link::selection,
+  a:visited::selection {
+    background-color: rgba(117, 0, 59, 0.85);
+    color: #f6eedf; }
 
 p {
   color: rgba(117, 0, 59, 0.85);
   font-size: clamp(1.2rem, 2vw, 2rem); }
+  p::selection {
+    background-color: rgba(117, 0, 59, 0.85);
+    color: #f6eedf; }
 
 i {
   font-size: clamp(3rem, 5vw, 4.5rem);
@@ -177,12 +190,52 @@ i {
 .events-content {
   grid-column: 1/11;
   background-color: #ff724c;
-  height: 40rem; }
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .events-content--event {
+    padding: 3rem 2rem;
+    flex-basis: 30rem;
+    flex-grow: 1;
+    margin: 1rem;
+    height: min-content; }
+    .events-content--event__title {
+      color: white;
+      font-weight: 300;
+      font-size: clamp(2rem, 8vw, 4rem);
+      margin: 0; }
+    .events-content--event__para {
+      color: white; }
+  .events-content .beach {
+    background: url(/images/beach-party.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .events-content .culture {
+    background: url(/images/culture-discovery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
 
 .events-text {
   grid-column: 11/12;
-  background-color: #730039;
-  height: 40rem; }
+  background-color: #ff724c;
+  height: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .events-text--title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 400;
+    margin: 0;
+    transform: rotate(90deg); }
+
+@media (max-width: 900px) {
+  .events-text {
+    grid-column: 11/-1; } }
 
 .features-content {
   grid-column: 1/11;
@@ -206,7 +259,29 @@ i {
 
 .motto {
   grid-column: 1/-1;
-  height: 40rem; }
+  height: min-content;
+  background-color: #730039;
+  text-align: center;
+  color: white;
+  padding: 5vh 2vw; }
+  .motto__title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 0; }
+    .motto__title::selection {
+      background-color: #ff724c; }
+    .motto__title::after {
+      content: "";
+      position: absolute; }
+  .motto__subtitle {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    font-weight: normal;
+    width: clamp(80%, 85%, 90%);
+    margin: 0 auto; }
+    .motto__subtitle::selection {
+      background-color: #ff724c; }
 
 .testimonials {
   background-color: #ff724c;
@@ -216,7 +291,7 @@ i {
 .villas {
   grid-column: 1/-1;
   height: auto;
-  padding: 5vh 2vw;
+  background-color: #730039;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,10 +302,11 @@ i {
     flex-grow: 1;
     margin: 1rem;
     cursor: pointer;
-    transition: 0.3s;
-    border-radius: 5px; }
+    border-radius: 5px;
+    border: 2px solid #730039;
+    transition: 0.3s; }
     .villas__villa:hover {
-      transform: scale(1.04); }
+      border: 2px solid #ff724c; }
   .villas .villa-1 {
     background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-1.jpg);
     background-repeat: no-repeat;
@@ -250,11 +326,7 @@ i {
     background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    border: 5px solid #730039;
-    transition: 0.3s; }
-    .villas .villa-4:hover {
-      border: 5px solid #ffc513; }
+    background-position: center; }
   .villas__villa--title {
     font-size: clamp(2rem, 8vw, 4rem);
     color: white;

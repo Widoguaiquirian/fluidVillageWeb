@@ -13,17 +13,34 @@ body {
    font-family: "Titillium Web", sans-serif;
 }
 
+h1::selection,
+h1::selection,
+h1::selection {
+   background-color: $color-primary-m-dark;
+   color: $color-quaternary;
+}
+
 a:link,
 a:visited {
    color: $color-quaternary;
    text-decoration: none;
    position: relative;
    border-radius: 0.3rem;
+
+   &::selection {
+      background-color: $color-primary-m-dark;
+      color: $color-quaternary;
+   }
 }
 
 p {
    color: $color-primary-m-dark;
    font-size: clamp(1.2rem, 2vw, 2rem);
+
+   &::selection {
+      background-color: $color-primary-m-dark;
+      color: $color-quaternary;
+   }
 }
 
 i {
