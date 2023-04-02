@@ -1,11 +1,73 @@
 .gallery-text {
    grid-column: 2/3;
-   height: 40rem;
-   background-color: $color-secondary;
+   background-color: $color-tertiary;
+   height: auto;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &--title {
+      font-size: $font-size-subtitle;
+      font-weight: 400;
+      margin: 0;
+      transform: rotate(-90deg);
+   }
 }
 
 .gallery-carousel {
    grid-column: 3/-1;
-   height: 40rem;
+   height: 80vh;
+   max-height: 70rem;
    background-color: $color-tertiary;
+   overflow: hidden;
+   position: relative;
+
+   &__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9;
+
+      cursor: pointer;
+
+      &--left {
+         left: 0;
+      }
+
+      &--right {
+         right: 0;
+      }
+
+      svg {
+         fill: $color-primary;
+      }
+   }
+
+   &__img-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      &--list {
+         position: relative;
+         height: 100%;
+         width: 100%;
+         transition: $transition-duration;
+
+         &__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+               width: 100%;
+               object-fit: cover;
+               height: 100%;
+            }
+         }
+      }
+   }
 }

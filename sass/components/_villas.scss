@@ -21,6 +21,10 @@
       &:hover {
          border: 2px solid $color-tertiary;
       }
+
+      &:hover .villas__villa--para {
+         opacity: 0;
+      }
    }
 
    .villa-1 {
@@ -28,6 +32,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      &:hover {
+         background: linear-gradient(transparent, transparent), url(/images/villa-1.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
    }
 
    .villa-2 {
@@ -35,6 +46,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      &:hover {
+         background: linear-gradient(transparent, transparent), url(/images/villa-2.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
    }
 
    .villa-3 {
@@ -42,6 +59,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      &:hover {
+         background: linear-gradient(transparent, transparent), url(/images/villa-3.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
    }
 
    .villa-4 {
@@ -49,6 +72,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      &:hover {
+         background: linear-gradient(transparent, transparent), url(/images/villa-4.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
    }
 
    &__villa--title {

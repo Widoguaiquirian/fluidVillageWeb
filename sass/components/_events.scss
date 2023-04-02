@@ -11,6 +11,7 @@
    &--event {
       padding: 3rem 2rem;
       flex-basis: 30rem;
+      cursor: pointer;
       flex-grow: 1;
       margin: 1rem;
       height: min-content;
@@ -28,14 +29,14 @@
    }
 
    .beach {
-      background: url(/images/beach-party.jpg);
+      background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(/images/beach-party.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
    }
 
    .culture {
-      background: url(/images/culture-discovery.jpg);
+      background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(/images/culture-discovery.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -60,7 +61,10 @@
 }
 
 @media (max-width: 900px) {
+   .events-content {
+      grid-column: 1/12;
+   }
    .events-text {
-      grid-column: 11/-1;
+      grid-column: 12/-1;
    }
 }

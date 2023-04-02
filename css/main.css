@@ -198,6 +198,7 @@ i {
   .events-content--event {
     padding: 3rem 2rem;
     flex-basis: 30rem;
+    cursor: pointer;
     flex-grow: 1;
     margin: 1rem;
     height: min-content; }
@@ -209,12 +210,12 @@ i {
     .events-content--event__para {
       color: white; }
   .events-content .beach {
-    background: url(/images/beach-party.jpg);
+    background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/beach-party.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .events-content .culture {
-    background: url(/images/culture-discovery.jpg);
+    background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/culture-discovery.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
@@ -234,8 +235,10 @@ i {
     transform: rotate(90deg); }
 
 @media (max-width: 900px) {
+  .events-content {
+    grid-column: 1/12; }
   .events-text {
-    grid-column: 11/-1; } }
+    grid-column: 12/-1; } }
 
 .features-content {
   grid-column: 1/11;
@@ -249,13 +252,56 @@ i {
 
 .gallery-text {
   grid-column: 2/3;
-  height: 40rem;
-  background-color: #ffc513; }
+  background-color: #ff724c;
+  height: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .gallery-text--title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 400;
+    margin: 0;
+    transform: rotate(-90deg); }
 
 .gallery-carousel {
   grid-column: 3/-1;
-  height: 40rem;
-  background-color: #ff724c; }
+  height: 80vh;
+  max-height: 70rem;
+  background-color: #ff724c;
+  overflow: hidden;
+  position: relative; }
+  .gallery-carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer; }
+    .gallery-carousel__btn--left {
+      left: 0; }
+    .gallery-carousel__btn--right {
+      right: 0; }
+    .gallery-carousel__btn svg {
+      fill: #730039; }
+  .gallery-carousel__img-container {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .gallery-carousel__img-container--list {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      transition: 0.3s; }
+      .gallery-carousel__img-container--list__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+        .gallery-carousel__img-container--list__item img {
+          width: 100%;
+          object-fit: cover;
+          height: 100%; }
 
 .motto {
   grid-column: 1/-1;
@@ -307,26 +353,48 @@ i {
     transition: 0.3s; }
     .villas__villa:hover {
       border: 2px solid #ff724c; }
+    .villas__villa:hover .villas__villa--para {
+      opacity: 0; }
   .villas .villa-1 {
     background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
+    .villas .villa-1:hover {
+      background: linear-gradient(transparent, transparent), url(/images/villa-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
   .villas .villa-2 {
     background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
+    .villas .villa-2:hover {
+      background: linear-gradient(transparent, transparent), url(/images/villa-2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
   .villas .villa-3 {
     background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
+    .villas .villa-3:hover {
+      background: linear-gradient(transparent, transparent), url(/images/villa-3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
   .villas .villa-4 {
     background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
+    .villas .villa-4:hover {
+      background: linear-gradient(transparent, transparent), url(/images/villa-4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
   .villas__villa--title {
     font-size: clamp(2rem, 8vw, 4rem);
     color: white;
