@@ -47,7 +47,7 @@ a:visited {
   border-radius: 0.3rem; }
 
 p {
-  color: white;
+  color: rgba(117, 0, 59, 0.85);
   font-size: clamp(1.2rem, 2vw, 2rem); }
 
 i {
@@ -60,17 +60,92 @@ i {
   height: 3rem;
   justify-content: center;
   line-height: 0;
-  width: 3rem; }
+  width: 3rem;
+  fill: white; }
 
 .booking {
   grid-column: 2/8;
-  background-color: #ffc513;
-  height: 40rem; }
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 1vh;
+  padding: 8vh 3vw; }
+  .booking__content--title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    position: relative;
+    font-weight: 300;
+    margin: 0; }
+    .booking__content--title::after {
+      content: "";
+      height: 3px;
+      width: clamp(20%, 30%, 50%);
+      background-color: #ffc513;
+      position: absolute;
+      left: 10%;
+      bottom: 0; }
+  .booking__content--para {
+    font-size: clamp(1.6rem, 5vw, 2rem); }
+  .booking__content--icons {
+    display: flex; }
+    .booking__content--icons i {
+      font-size: clamp(2rem, 5vw, 4rem); }
+    .booking__content--icons--weather {
+      display: flex;
+      align-items: center;
+      flex-basis: 30%;
+      margin-right: 1rem; }
+      .booking__content--icons--weather p {
+        font-size: clamp(2rem, 3vw, 3rem);
+        font-weight: 100;
+        margin: 0 0 0 2rem; }
+    .booking__content--icons--time {
+      display: flex;
+      align-items: center; }
+      .booking__content--icons--time p {
+        font-size: clamp(2rem, 3vw, 3rem);
+        font-weight: 100;
+        margin: 0 0 0 2rem; }
 
-.booking-date {
+.booking__date {
   grid-column: 8/12;
-  background-color: #ff724c;
-  height: 40rem; }
+  padding: 8vh 3vw; }
+  .booking__date--reservation {
+    display: flex;
+    justify-content: space-between; }
+    .booking__date--reservation-content {
+      flex-basis: 33.33%;
+      text-align: center;
+      margin: 0 0.5rem; }
+      .booking__date--reservation-content-feature {
+        color: white;
+        width: 100%;
+        height: 80%;
+        max-width: 11rem;
+        background-color: #ffc513;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .booking__date--reservation-content-feature::after {
+          position: absolute;
+          content: "";
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-bottom: 12px solid #ffc513;
+          top: -12px; }
+        .booking__date--reservation-content-feature .text {
+          font-size: 2rem;
+          padding: 0.6rem 0; }
+        .booking__date--reservation-content-feature .number {
+          margin: 0;
+          font-size: clamp(2rem, 3vw, 3rem);
+          font-weight: bold; }
+        .booking__date--reservation-content-feature .uti-svg-ico {
+          width: 5rem;
+          cursor: pointer;
+          height: 5rem; }
+          .booking__date--reservation-content-feature .uti-svg-ico:hover {
+            fill: #730039; }
 
 .events-content {
   grid-column: 1/11;
@@ -130,7 +205,7 @@ i {
 .header {
   grid-column: 1 /-1;
   height: 100vh;
-  max-height: 80vh;
+  max-height: 900px;
   background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,7 +237,8 @@ i {
       font-size: clamp(1.6rem, 4vw, 3.6rem);
       font-weight: 500;
       margin: 0;
-      padding: 0 2rem 2rem clamp(3rem, 5vw, 4.5rem); }
+      padding: 0 2rem 2rem clamp(3rem, 5vw, 4.5rem);
+      color: white; }
     .header__logo__content--content--link {
       font-size: clamp(1.4rem, 4vw, 2.5rem);
       font-weight: 300;

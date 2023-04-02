@@ -1,7 +1,7 @@
 .header {
    grid-column: 1 /-1;
    height: 100vh;
-   max-height: 80vh;
+   max-height: 900px;
    background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(../images/hero.jpg);
    background-repeat: no-repeat;
    background-size: cover;
@@ -43,6 +43,7 @@
          font-weight: 500;
          margin: 0;
          padding: 0 2rem 2rem $font-size-title;
+         color: white;
       }
 
       &--link {

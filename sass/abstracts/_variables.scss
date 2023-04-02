@@ -21,6 +21,12 @@ $transition-duration: 0.3s;
 // Section title font size
 $font-size-title: clamp(3rem, 5vw, 4.5rem);
 
+// Section subtitle font size
+$font-size-subtitle: clamp(2rem, 8vw, 4rem);
+
+// Section regular font size
+$font-size-regular: clamp(1.6rem, 5vw, 2rem);
+
 // Section padding
 $padding-section: 8vh 3vw;
 
