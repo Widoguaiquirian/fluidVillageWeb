@@ -166,8 +166,8 @@ i {
     .booking__content--title::after {
       left: 30%; }
   .booking__date {
-    grid-column: 2/12;
-    padding: 0; }
+    grid-column: 1/-1;
+    padding: 1rem 2rem; }
     .booking__date--reservation-content {
       display: flex;
       align-items: center;
@@ -205,7 +205,6 @@ i {
   background-color: #ff724c; }
 
 .motto {
-  background-color: #ffc513;
   grid-column: 1/-1;
   height: 40rem; }
 
@@ -215,9 +214,62 @@ i {
   height: 40rem; }
 
 .villas {
-  background-color: #730039;
   grid-column: 1/-1;
-  height: 40rem; }
+  height: auto;
+  padding: 5vh 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .villas__villa {
+    padding: 3rem 2rem;
+    flex-basis: 35rem;
+    flex-grow: 1;
+    margin: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px; }
+    .villas__villa:hover {
+      transform: scale(1.04); }
+  .villas .villa-1 {
+    background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .villas .villa-2 {
+    background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .villas .villa-3 {
+    background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .villas .villa-4 {
+    background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url(/images/villa-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #730039;
+    transition: 0.3s; }
+    .villas .villa-4:hover {
+      border: 5px solid #ffc513; }
+  .villas__villa--title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    color: white;
+    margin: 0;
+    font-weight: 300; }
+  .villas__villa--para {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    color: white; }
+  .villas__villa--btn {
+    background-color: #ff724c;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    font-weight: bold; }
+    .villas__villa--btn:hover {
+      background-color: #730039; }
 
 .footer {
   background-color: #730039;

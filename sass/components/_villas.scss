@@ -1,5 +1,81 @@
 .villas {
-   background-color: $color-primary;
    grid-column: 1/-1;
-   height: 40rem;
+   height: auto;
+   padding: $padding-section;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+
+   &__villa {
+      padding: 3rem 2rem;
+      flex-basis: 35rem;
+      flex-grow: 1;
+      margin: 1rem;
+      cursor: pointer;
+      transition: $transition-duration;
+      border-radius: 5px;
+
+      &:hover {
+         transform: scale(1.04);
+      }
+   }
+
+   .villa-1 {
+      background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(/images/villa-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+
+   .villa-2 {
+      background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(/images/villa-2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+
+   .villa-3 {
+      background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(/images/villa-3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+
+   .villa-4 {
+      background: linear-gradient($color-primary-m-light, $color-primary-m-light), url(/images/villa-4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border: 5px solid $color-primary;
+      transition: $transition-duration;
+
+      &:hover {
+         border: 5px solid $color-secondary;
+      }
+   }
+
+   &__villa--title {
+      font-size: $font-size-subtitle;
+      color: white;
+      margin: 0;
+      font-weight: 300;
+   }
+
+   &__villa--para {
+      font-size: $font-size-regular;
+      color: white;
+   }
+
+   &__villa--btn {
+      background-color: $color-tertiary;
+      padding: 0.5rem 1rem;
+      transition: $transition-duration;
+      font-weight: bold;
+
+      &:hover {
+         background-color: $color-primary;
+      }
+   }
 }
