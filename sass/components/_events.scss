@@ -1,7 +1,8 @@
 .events-content {
    grid-column: 1/11;
    background-color: $color-tertiary;
-   height: auto;
+   height: min-content;
+   padding: $padding-section;
 
    display: flex;
    justify-content: center;
@@ -15,6 +16,7 @@
       flex-grow: 1;
       margin: 1rem;
       height: min-content;
+      border-radius: 5px;
 
       &__title {
          color: white;

@@ -1,4 +1,5 @@
 .testimonials {
    grid-column: 2/12;
-   height: 40rem;
+   height: min-content;
+   padding: $padding-section;
 }

@@ -1,6 +1,7 @@
 .villas {
    grid-column: 1/-1;
-   height: auto;
+   height: min-content;
+   padding: $padding-section;
    background-color: $color-primary;
 
    display: flex;

@@ -4,6 +4,8 @@
    grid-template-rows: repeat(3, max-content);
    row-gap: 1vh;
    padding: $padding-section;
+   height: min-content;
+   padding: $padding-section;
 
    &__content--title {
       font-size: $font-size-subtitle;

@@ -1,7 +1,8 @@
 .features-content {
    grid-column: 1/11;
    background-color: $color-tertiary;
-   height: auto;
+   height: min-content;
+   padding: $padding-section;
 
    display: flex;
    justify-content: center;
@@ -14,6 +15,7 @@
       cursor: pointer;
       flex-grow: 1;
       margin: 1rem;
+      border-radius: 5px;
       height: min-content;
 
       &__title {

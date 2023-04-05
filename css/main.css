@@ -81,7 +81,9 @@ i {
   display: grid;
   grid-template-rows: repeat(3, max-content);
   row-gap: 1vh;
-  padding: 5vh 2vw; }
+  padding: 3vh 1vw;
+  height: min-content;
+  padding: 3vh 1vw; }
   .booking__content--title {
     font-size: clamp(2rem, 8vw, 4rem);
     position: relative;
@@ -120,7 +122,7 @@ i {
 
 .booking__date {
   grid-column: 8/12;
-  padding: 5vh 2vw; }
+  padding: 3vh 1vw; }
   .booking__date--reservation {
     display: flex;
     justify-content: space-between;
@@ -190,7 +192,8 @@ i {
 .events-content {
   grid-column: 1/11;
   background-color: #ff724c;
-  height: auto;
+  height: min-content;
+  padding: 3vh 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +204,8 @@ i {
     cursor: pointer;
     flex-grow: 1;
     margin: 1rem;
-    height: min-content; }
+    height: min-content;
+    border-radius: 5px; }
     .events-content--event__title {
       color: white;
       font-weight: 300;
@@ -243,7 +247,8 @@ i {
 .features-content {
   grid-column: 1/11;
   background-color: #ff724c;
-  height: auto;
+  height: min-content;
+  padding: 3vh 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,6 +259,7 @@ i {
     cursor: pointer;
     flex-grow: 1;
     margin: 1rem;
+    border-radius: 5px;
     height: min-content; }
     .features-content--event__title {
       color: white;
@@ -391,7 +397,7 @@ i {
   background-color: #730039;
   text-align: center;
   color: white;
-  padding: 5vh 2vw; }
+  padding: 3vh 1vw; }
   .motto__title {
     font-size: clamp(2rem, 8vw, 4rem);
     font-weight: 300;
@@ -413,11 +419,13 @@ i {
 
 .testimonials {
   grid-column: 2/12;
-  height: 40rem; }
+  height: min-content;
+  padding: 3vh 1vw; }
 
 .villas {
   grid-column: 1/-1;
-  height: auto;
+  height: min-content;
+  padding: 3vh 1vw;
   background-color: #730039;
   display: flex;
   justify-content: center;
