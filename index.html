@@ -247,57 +247,51 @@
 
       <!-- Gallery carousel section -->
       <section class="gallery-carousel">
-         <!-- Left button -->
-         <div class="gallery-carousel__btn gallery-carousel__btn--left">
-            <svg class="uti-svg-ico">
-               <use class="icons-real" xlink:href="images/icons/_svg/sprite.svg#icon-arrow_left"></use>
-            </svg>
-         </div>
-
          <!-- Image container -->
          <div class="gallery-carousel__img-container">
-            <ul class="gallery-carousel__img-container--list">
-               <li class="gallery-carousel__img-container--list__item one">
-                  <img src="images/gallery-1.jpg" alt="gallery photos" />
-               </li>
-               <li class="gallery-carousel__img-container--list__item">
-                  <img src="images/gallery-2.jpg" alt="gallery photos" />
-               </li>
-               <li class="gallery-carousel__img-container--list__item">
-                  <img src="images/gallery-3.jpg" alt="gallery photos" />
-               </li>
-               <li class="gallery-carousel__img-container--list__item">
-                  <img src="images/gallery-4.jpg" alt="gallery photos" />
-               </li>
-               <li class="gallery-carousel__img-container--list__item">
-                  <img src="images/gallery-5.jpg" alt="gallery photos" />
-               </li>
-            </ul>
+            <picture class="slide slide--1">
+               <img src="/images/gallery-1.jpg" alt="gallery photos" />
+            </picture>
+            <picture class="slide slide--2">
+               <img src="/images/gallery-2.jpg" alt="gallery photos" />
+            </picture>
+            <picture class="slide slide--3"> <img src="/images/gallery-3.jpg" alt="gallery photos" /> </picture>s
+            <picture class="slide slide--4">
+               <img src="/images/gallery-4.jpg" alt="gallery photos" />
+            </picture>
+            <picture class="slide slide--5">
+               <img src="/images/gallery-5.jpg" alt="gallery photos" />
+            </picture>
          </div>
-
-         <!-- Right button -->
-         <div class="gallery-carousel__btn gallery-carousel__btn--right">
-            <svg class="uti-svg-ico">
-               <use xlink:href="images/icons/_svg/sprite.svg#icon-arrow_right"></use>
-            </svg>
-         </div>
-
-         <div class="gallery-carousel__dots">
-            <button class="gallery-carousel__dots--btn current-img"></button>
-            <button class="gallery-carousel__dots--btn"></button>
-            <button class="gallery-carousel__dots--btn"></button>
-            <button class="gallery-carousel__dots--btn"></button>
-            <button class="gallery-carousel__dots--btn"></button>
-         </div>
+         <button class="slider__btn slider__btn--left">&lt;</button>
+         <button class="slider__btn slider__btn--right">&gt;</button>
+         <div class="dots"></div>
       </section>
       <!-- End of carousel text section -->
 
       <!-- Features content section -->
-      <section class="features-content"> </section>
+      <section class="features-content">
+         <div class="features-content--event cocktail">
+            <h2 class="features-content--event__title">Cocktail Package</h2>
+            <p class="features-content--event__para"
+               >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti neque culpa tenetur doloribus sit
+               harum voluptas provident iure nisi ullam.</p
+            >
+         </div>
+         <div class="features-content--event surfing">
+            <h2 class="features-content--event__title">Surfing Package</h2>
+            <p class="features-content--event__para"
+               >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti neque culpa tenetur doloribus sit
+               harum voluptas provident iure nisi ullam.</p
+            >
+         </div>
+      </section>
       <!-- End of Features content section -->
 
       <!-- Features text section -->
-      <section class="features-text"> </section>
+      <section class="features-text">
+         <h2 class="features-text--title">Features</h2>
+      </section>
       <!-- End of features text section -->
 
       <!-- Testimonials section -->

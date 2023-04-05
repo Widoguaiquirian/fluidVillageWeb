@@ -1,11 +1,70 @@
 .features-content {
    grid-column: 1/11;
-   background-color: $color-primary;
-   height: 40rem;
+   background-color: $color-tertiary;
+   height: auto;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+
+   &--event {
+      padding: 3rem 2rem;
+      flex-basis: 30rem;
+      cursor: pointer;
+      flex-grow: 1;
+      margin: 1rem;
+      height: min-content;
+
+      &__title {
+         color: white;
+         font-weight: 300;
+         font-size: $font-size-subtitle;
+         margin: 0;
+      }
+
+      &__para {
+         color: white;
+      }
+   }
+
+   .cocktail {
+      background: linear-gradient($color-secondary-m-light, $color-secondary-m-light), url(/images/cocktail.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+
+   .surfing {
+      background: linear-gradient($color-secondary-m-light, $color-secondary-m-light), url(/images/surfing.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
 }
 
 .features-text {
    grid-column: 11/12;
-   background-color: $color-secondary;
-   height: 40rem;
+   background-color: $color-tertiary;
+   height: auto;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &--title {
+      font-size: $font-size-subtitle;
+      font-weight: 400;
+      margin: 0;
+      transform: rotate(90deg);
+   }
+}
+
+@media (max-width: 900px) {
+   .features-content {
+      grid-column: 1/12;
+   }
+   .features-text {
+      grid-column: 12/-1;
+   }
 }
