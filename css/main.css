@@ -419,8 +419,77 @@ i {
 
 .testimonials {
   grid-column: 2/12;
-  height: min-content;
-  padding: 3vh 1vw; }
+  padding: 3vh 1vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28rem);
+  grid-gap: 5rem;
+  place-content: center; }
+  .testimonials__card {
+    width: 28rem;
+    height: 30rem;
+    border-radius: 5px;
+    position: relative; }
+    .testimonials__card--front {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 1s ease-in-out;
+      backface-visibility: hidden;
+      transform: perspective(100rem);
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      padding: 2rem; }
+      .testimonials__card--front h2 {
+        padding: 1rem;
+        background-color: rgba(255, 196, 20, 0.55);
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%; }
+    .testimonials__card--back {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 1s ease-in-out;
+      backface-visibility: hidden;
+      transform: perspective(100rem);
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      padding: 3rem; }
+      .testimonials__card--back p {
+        place-self: center;
+        font-size: 2rem;
+        font-weight: 400;
+        color: white; }
+  .testimonials .testimonials__card--back {
+    transform: perspective(100rem) rotateY(0.5turn);
+    background-color: #ffc513; }
+  .testimonials__card:hover .testimonials__card--front {
+    transform: perspective(100rem) rotateY(0.5turn); }
+  .testimonials__card:hover .testimonials__card--back {
+    transform: perspective(100rem) rotateY(1turn); }
+  .testimonials__card:nth-child(1) .testimonials__card--front {
+    background-image: url(/images/testimonials-1.jpg); }
+  .testimonials__card:nth-child(2) .testimonials__card--front {
+    background-image: url(/images/testimonials-2.jpg); }
+  .testimonials__card:nth-child(3) .testimonials__card--front {
+    background-image: url(/images/testimonials-3.jpg); }
+  .testimonials__card:nth-child(4) .testimonials__card--front {
+    background-image: url(/images/testimonials-4.jpg); }
+  .testimonials__card:nth-child(5) .testimonials__card--front {
+    background-image: url(/images/testimonials-5.jpg); }
+  .testimonials__card:nth-child(6) .testimonials__card--front {
+    background-image: url(/images/testimonials-6.jpg); }
 
 .villas {
   grid-column: 1/-1;
